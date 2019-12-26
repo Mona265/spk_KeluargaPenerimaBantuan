@@ -38,7 +38,26 @@
       <th scope="col" width="15%">Luas Tanah</th>
     </tr>
   </thead>
-  
+    <?php
+    include 'koneksi.php';
+    $nomer = 1;
+    $data = mysqli_query($koneksi,"select * from calon_penerima");
+    while ($d = mysqli_fetch_array($data)) {
+        ?>
+        <tr>
+            <td><?php echo $nomer++; ?></td>
+            <td><?php echo $d['nama']; ?></td>
+            <td><?php echo $d['alamat']; ?></td>
+            <td><?php echo $d['umur']; ?></td>
+            <td><?php echo $d['penghasilan']; ?></td>
+            <td><?php echo $d['jumlah_jiwa']; ?></td>
+            <td><?php echo $d['luas_rumah']; ?></td>
+            
+            
+        </tr>
+        <?php
+    }
+      ?>   
 </table>
  </body>
 </html>

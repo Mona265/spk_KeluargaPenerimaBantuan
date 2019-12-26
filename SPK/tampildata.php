@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Perpustakaan PNJ</title>
+    <title>Sistem Pendukung Keputusan</title>
   </head>
   <body>
     
@@ -24,10 +24,10 @@
   <tr>
       <td>
       <form method="post" action="index.php">
-        <button type="submit">Home</button>
+        <button type="submit" >Home</button>
     </form><br><form method="post" action="tambahdatapenerima.php">
-        <button type="submit">Tambah Data Penerima</button><br><form method="post" action="prosesdata.php">
-        <button type="submit">Proses Data</button>
+        <button type="submit" >Tambah Data Penerima</button><br><br><form method="post" action="prosesdata.php">
+        <button type="submit" >Proses Data</button>
     </form> </td>
   </tr>
     <tr>
@@ -43,7 +43,29 @@
     </tr>
   </thead>
   
-        
+     <?php
+    include 'koneksi.php';
+    $nomer = 1;
+    $data = mysqli_query($koneksi,"select * from calon_penerima");
+    while ($d = mysqli_fetch_array($data)) {
+        ?>
+        <tr>
+            <td><?php echo $nomer++; ?></td>
+            <td><?php echo $d['nama']; ?></td>
+            <td><?php echo $d['alamat']; ?></td>
+            <td><?php echo $d['umur']; ?></td>
+            <td><?php echo $d['penghasilan']; ?></td>
+            <td><?php echo $d['jumlah_jiwa']; ?></td>
+            <td><?php echo $d['luas_rumah']; ?></td>
+            
+            <td>
+                <a href="editpengunjung.php?id=<?php echo $d['id']; ?>">EDIT</a>
+                <a href="hapus.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+            </td>
+        </tr>
+        <?php
+    }
+      ?>   
   
 </table>
  </body>
