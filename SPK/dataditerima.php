@@ -33,13 +33,14 @@
       <th scope="col" width="15%">Nama</th>
       <th scope="col" width="15%">Alamat</th>
       <th scope="col" width="15%">Value</th>
+      <th scope="col" width="15%"></th>
       
     </tr>
   </thead>
     <?php
     include 'koneksi.php';
     $nomer = 1;
-    $data = mysqli_query($koneksi,"SELECT calon_penerima.nama, calon_penerima.alamat, hasil.value FROM hasil LEFT JOIN calon_penerima ON hasil.id_cp=calon_penerima.id ORDER BY VALUE DESC");
+    $data = mysqli_query($koneksi,"SELECT calon_penerima.id, calon_penerima.nama, calon_penerima.alamat, hasil.value FROM hasil LEFT JOIN calon_penerima ON hasil.id_cp=calon_penerima.id ORDER BY VALUE DESC");
 
     while ($d = mysqli_fetch_array($data)) {
         ?>
@@ -48,7 +49,9 @@
             <td><?php echo $d['nama']; ?></td>
             <td><?php echo $d['alamat']; ?></td>
             <td><?php echo $d['value']; ?></td>
-            
+            <td>
+                <a class="white_bg_btn" href='lihatprofil.php?id="<?php echo $d['id'] ?>"'>Lihat</a>
+            </td>
             
         </tr>
         <?php
