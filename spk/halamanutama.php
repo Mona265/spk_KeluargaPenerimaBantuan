@@ -79,12 +79,10 @@
                             <p>Dendy Dharmawan</p>
                             <p>Musyaffa Nur Qisty</p>
                             <p>Ramona Matovani</p>
-        					<p>
-Copyright 2019 Kelompok 5<i class="fa fa-heart-o" aria-hidden="true"></i>
-
-</p>
+        					<p>Copyright 2019 Kelompok 5<i class="fa fa-heart-o" aria-hidden="true"></i></p>
         				</aside>
         			</div>
+                    
         			<div class="col-lg-5 col-sm-6">
         				<aside class="f_widget news_widget">
         					<div class="f_title">

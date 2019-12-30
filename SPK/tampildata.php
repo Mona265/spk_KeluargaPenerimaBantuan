@@ -47,68 +47,50 @@
         <header class="header_area">
             <div class="main_menu">
               <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
+                 <div class="container">
+
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="banner_content text-center">
-              <h3>Sistem Pendukung Keputusan Keluarga Penerima Bantuan</h3>
-            </div>
+                   <div class="banner_content text-center">
+                     <h3>Sistem Pendukung Keputusan Keluarga Penerima Bantuan</h3>
+                   </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="halamanutama.php">Home</a></li> 
                 <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
-                <!-- <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tambah Data</a>
-                </li> 
-                <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-                  </ul>
-                </li> 
-                <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                  </ul>
-                </li> 
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-              </ul> -->
             </div> 
-          </div>
+                </div>
               </nav>
             </div>
         </header>
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
-        <section class="home_banner_area">
-            <div class="box_1622"><br>
+      <section class="home_banner_area">
+        <div class="box_1622"><br>
             
-            <a class="main_btn" href="tambahdatapenerima.php">Tambahkan penerima</a>
-            <a class="main_btn" href="halamanutama.php">Proses data</a>
+          <a class="main_btn" href="tambahdatapenerima.php">Tambahkan penerima</a>
+          <a class="main_btn" href="halamanutama.php">Proses data</a>
 
-<table class="table">
-  <thead class="thead-dark">
+      <table class="table">
+      <thead class="thead-dark">
   
-    <tr>
-      <th scope="col" width="10%">No</th>
-      <th scope="col" width="15%">Nama</th>
-      <th scope="col" width="15%">Alamat</th>
-      <th scope="col" width="15%">Umur</th>
-      <th scope="col" width="15%">Penghasilan</th>
-      <th scope="col" width="15%">Jumlah Jiwa</th>
-      <th scope="col" width="15%">Luas Tanah</th>
-
-
-    </tr>
-  </thead>
+        <tr>
+         <th scope="col" width="10%">No</th>
+         <th scope="col" width="15%">Nama</th>
+         <th scope="col" width="15%">Alamat</th>
+         <th scope="col" width="15%">Umur</th>
+         <th scope="col" width="15%">Penghasilan</th>
+         <th scope="col" width="15%">Jumlah Jiwa</th>
+         <th scope="col" width="15%">Luas Rumah</th>
+       </tr>
+      </thead>
   
      <?php
     include 'koneksi.php';
@@ -126,7 +108,7 @@
             <td><?php echo $d['luas_rumah']; ?></td>
             
             <td>
-                <a class="white_bg_btn" href="editpengunjung.php?id=<?php echo $d['id']; ?>">Edit</a>
+                <a class="white_bg_btn" href="editpenerima.php?id=<?php echo $d['id']; ?>">Edit</a>
                 <a class="white_bg_btn" href="hapus.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Hapus Data?');">Hapus</a>
             </td>
         </tr>
@@ -134,9 +116,9 @@
     }
       ?>   
   
-</table>
-            </div>
-        </section>
+      </table>
+      </div>
+      </section>
         <!--================End Home Banner Area =================-->
         
  
@@ -156,10 +138,7 @@
                             <p>Dendy Dharmawan</p>
                             <p>Musyaffa Nur Qisty</p>
                             <p>Ramona Matovani</p>
-                  <p>
-Copyright 2019 Kelompok 5<i class="fa fa-heart-o" aria-hidden="true"></i>
-
-</p>
+                  <p>Copyright 2019 Kelompok 5<i class="fa fa-heart-o" aria-hidden="true"></i></p>
                 </aside>
               </div>
               <div class="col-lg-5 col-sm-6">
