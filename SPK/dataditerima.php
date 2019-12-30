@@ -32,10 +32,8 @@
       <th scope="col" width="10%">No</th>
       <th scope="col" width="15%">Nama</th>
       <th scope="col" width="15%">Alamat</th>
-      <th scope="col" width="15%">Umur</th>
-      <th scope="col" width="15%">Penghasilan</th>
-      <th scope="col" width="15%">Jumalh Jiwa</th>
-      <th scope="col" width="15%">Luas Tanah</th>
+      <th scope="col" width="15%">Value</th>
+      
     </tr>
   </thead>
     <?php
@@ -48,10 +46,7 @@
             <td><?php echo $nomer++; ?></td>
             <td><?php echo $d['nama']; ?></td>
             <td><?php echo $d['alamat']; ?></td>
-            <td><?php echo $d['umur']; ?></td>
-            <td><?php echo $d['penghasilan']; ?></td>
-            <td><?php echo $d['jumlah_jiwa']; ?></td>
-            <td><?php echo $d['luas_rumah']; ?></td>
+            <td><?php echo $d['value']; ?></td>
             
             
         </tr>
