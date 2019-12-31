@@ -23,7 +23,7 @@
   <thead class="thead-dark" style="outline-color: blue">
   <tr>
       <td>
-      <form method="post" action="halamanutama.php">
+      <form method="post" action="index.php">
         <button type="submit">Home</button>
     </form><br>
     </form> </td>
@@ -39,8 +39,7 @@
     <?php
     include 'koneksi.php';
     $nomer = 1;
-    $data = mysqli_query($koneksi,"SELECT calon_penerima.nama, calon_penerima.alamat, hasil.value FROM hasil LEFT JOIN calon_penerima ON hasil.id_cp=calon_penerima.id ORDER BY VALUE DESC");
-
+    $data = mysqli_query($koneksi,"select * from calon_penerima");
     while ($d = mysqli_fetch_array($data)) {
         ?>
         <tr>
