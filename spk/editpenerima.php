@@ -53,6 +53,9 @@ while ($d = mysqli_fetch_array($data)) {
     
    
   <button type="submit"onclick="return confirm('Simpan Data?');">Simpan</button>
+      <form action="tampildata.php">
+         <button type="submit"onclick="return confirm('Yakin batal?');">Batal</button>
+      </form>
   </form>
 </div>
 

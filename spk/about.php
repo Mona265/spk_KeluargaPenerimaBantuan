@@ -27,7 +27,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand" href="halamanutama.php"><img src="img/log.png" height="110px" width="160px" style="position: relative;"></a>
+						<a class="navbar-brand" href="halamanutama.php"><img src="img/logopkh.png" height="100px" width="250px" style="position: relative;"></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -36,8 +36,8 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item"><a class="nav-link" href="halamanutama.php">Home</a></li> 
-								<li class="nav-item"><a class="nav-link" href="about.php">About</a></li> 
+								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
 						</div> 
 					</div>
             	</nav>
@@ -53,8 +53,7 @@
 						<div class="banner_content text-center">
 							<h3>Sistem Pendukung Keputusan <br />Keluarga Penerima Bantuan</h3>
 							<p>Website resmi Dinas Sosial Kota Bogor</p>
-							<a class="main_btn" href="dataditerima.php">Lihat data</a><br>
-                            <a class="main_btn" href="tampildata.php">Kelola data</a>
+							
 						</div>
 					</div>
 				</div>

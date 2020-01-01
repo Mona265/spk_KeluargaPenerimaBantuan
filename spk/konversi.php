@@ -109,10 +109,10 @@ include("koneksi.php");
         }
     }
 
-header("location:tampildata.php")
+header("location:dataditerima.php")
 ?>
 
-<a href="tampildata.php">kembali</a>
+
 
 
 

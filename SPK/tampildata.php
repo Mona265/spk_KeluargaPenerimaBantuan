@@ -75,19 +75,21 @@
         <div class="box_1622"><br>
             
           <a class="main_btn" href="tambahdatapenerima.php">Tambahkan penerima</a>
-          <a class="main_btn" href="halamanutama.php">Proses data</a>
+          <a class="main_btn" href="konversi.php">Proses data</a>
 
       <table class="table">
       <thead class="thead-dark">
   
         <tr>
-         <th scope="col" width="10%">No</th>
-         <th scope="col" width="15%">Nama</th>
-         <th scope="col" width="15%">Alamat</th>
-         <th scope="col" width="15%">Umur</th>
-         <th scope="col" width="15%">Penghasilan</th>
-         <th scope="col" width="15%">Jumlah Jiwa</th>
-         <th scope="col" width="15%">Luas Rumah</th>
+         <th scope="col" width="5%">No</th>
+         <th scope="col" width="10%">Nama</th>
+         <th scope="col" width="10%">Alamat</th>
+         <th scope="col" width="10%">Umur</th>
+         <th scope="col" width="10%">Penghasilan</th>
+         <th scope="col" width="10%">Jumlah Jiwa</th>
+         <th scope="col" width="10%">Luas Rumah</th>
+         <th scope="col" width="15%"></th>
+
        </tr>
       </thead>
   
