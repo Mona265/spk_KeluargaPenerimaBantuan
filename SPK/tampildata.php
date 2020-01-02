@@ -75,7 +75,7 @@
         <div class="box_1622"><br>
             
           <a class="main_btn" href="tambahdatapenerima.php">Tambahkan penerima</a>
-          <a class="main_btn" href="konversi.php">Proses data</a>
+          <a class="main_btn" href="proses_spk.php">Proses data</a>
 
       <table class="table">
       <thead class="thead-dark">

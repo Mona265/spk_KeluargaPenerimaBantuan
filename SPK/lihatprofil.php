@@ -1,17 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
 
-    <title>Sistem pendukung Keputusan</title>
-  </head>
-  <body>
-    
+<title>Sistem Pendukung Keputusan</title>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -22,25 +14,18 @@
     <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
-        
-<table class="table">
-  <thead class="thead-dark">
-   <tr>
-     <td>
-       <a class="main_btn" href='dataditerima.php'>kembali</a>
-     </td>
-    </tr>
 
-  </thead>
-  <tr class="bg-primary">
-      <th scope="col" width="15%">Nama</th>
-      <th scope="col" width="15%">Alamat</th>
-      <th scope="col" width="15%">Umur</th>
-      <th scope="col" width="15%">Penghasilan</th>
-      <th scope="col" width="15%">Jumlah Jiwa</th>
-      <th scope="col" width="15%">Luas Tanah</th>
-    </tr>
-     <?php
+<a class="main_btn" href='dataditerima.php'>kembali</a>
+
+
+  <div class="container">
+    
+      <div class="container-fluid">
+     <hr>
+
+      <div class="card card-1 col-md-6 text-md-center" id="card1">        
+        <table class="table table-hover">
+<?php
     include 'koneksi.php';
 
     if( !isset($_GET['id']) ){
@@ -55,21 +40,38 @@ $sql = "SELECT * FROM calon_penerima WHERE id=$id";
 $query = mysqli_query($koneksi, $sql);
 
     $d = mysqli_fetch_array($query); //tanpa while karena data hanya satu baris
-        ?>
-        <tr>
-            <td><?php echo $d['nama']; ?></td>
-            <td><?php echo $d['alamat']; ?></td>
-            <td><?php echo $d['umur']; ?></td>
-            <td><?php echo $d['penghasilan']; ?></td>
-            <td><?php echo $d['jumlah_jiwa']; ?></td>
-            <td><?php echo $d['luas_rumah']; ?></td>
-            
-        </tr>
-        
-        <?php
+?>
+
+  <tbody>
+    <tr>
+      <td><span class="bold">Nama</span></td>
+      <td><?php echo $d['nama']; ?></td>
+    </tr>
+    <tr>
+      <td><span class="bold">Alamat</span></td>
+      <td><?php echo $d['alamat']; ?></td>
+    </tr>
+    <tr>
+      <td><span class="bold">Umur</span></td>
+      <td><?php echo $d['umur']; ?></td>
+    </tr>
+    <tr>
+      <td><span class="bold">Penghasilan</span></td>
+      <td><?php echo $d['penghasilan']; ?></td>
+    </tr>
+    <tr>
+      <td><span class="bold">Jumlah Jiwa</span></td>
+      <td><?php echo $d['jumlah_jiwa']; ?></td>
+    </tr>
+    <tr>
+      <td><span class="bold">Luas Tanah</span></td>
+      <td><?php echo $d['luas_rumah']; ?></td>
+    </tr>
+
+  </tbody>
+        </table>
+      </div>
+
+      </div>
     
-      ?>   
-  
-</table>
- </body>
-</html>
+  </div>  <!-- container -->
