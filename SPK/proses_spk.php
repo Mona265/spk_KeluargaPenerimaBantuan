@@ -48,7 +48,7 @@ include("koneksi.php");
 
     $sql1 = "SELECT MIN(penghasilan) AS Gaji, MAX(jumlah_jiwa) AS Jiwa, MIN(luas_rumah) AS Rumah, MAX(umur) AS Umur FROM `konversi`";
     $query1 = mysqli_query($koneksi, $sql1);
-    $row1 = mysqli_fetch_array($query1);    //tidak menggunakan while karena datanya hanya satu yaitu dimana id=$id
+    $row1 = mysqli_fetch_array($query1);    //tidak menggunakan while karena baris datanya hanya satu
     $gaji = $row1['Gaji']; //min
     $jiwa = $row1['Jiwa']; //max
     $rumah = $row1['Rumah']; //min
