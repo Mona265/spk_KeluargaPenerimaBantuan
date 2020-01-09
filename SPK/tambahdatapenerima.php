@@ -44,10 +44,11 @@
     
    
   <button type="submit"onclick="return confirm('Simpan Data?');">Tambah</button>
-      <form action="tampildata.php">
-         <button type="submit"onclick="return confirm('Yakin batal?');">Batal</button>
+      
+  </form><br>
+  <form action="tampildata.php">
+         <button type="cancel"onclick="return confirm('Yakin batal?');">Batal</button>
       </form>
-  </form>
 </div>
 
 </body>

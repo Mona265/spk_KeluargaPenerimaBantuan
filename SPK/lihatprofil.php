@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
 
-<a class="main_btn" href='dataditerima.php'>kembali</a>
 
 
   <div class="container">
@@ -67,10 +66,12 @@ $query = mysqli_query($koneksi, $sql);
       <td><span class="bold">Luas Tanah</span></td>
       <td><?php echo $d['luas_rumah']; ?></td>
     </tr>
-
   </tbody>
-        </table>
-      </div>
+
+  </table>
+
+  </div>
+  <a class="main_btn" href='dataditerima.php'>kembali</a>
 
       </div>
     
