@@ -63,7 +63,7 @@ $query = mysqli_query($koneksi, $sql);
       <td><?php echo $d['jumlah_jiwa']; ?></td>
     </tr>
     <tr>
-      <td><span class="bold">Luas Tanah</span></td>
+      <td><span class="bold">Luas Rumah</span></td>
       <td><?php echo $d['luas_rumah']; ?></td>
     </tr>
   </tbody>
