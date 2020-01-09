@@ -40,7 +40,7 @@ include("koneksi.php");
             $query_k = "SELECT * FROM `konversi` WHERE id_cp='$id_cp_k'";
             $data_k = mysqli_query($koneksi, $query_k);
 
-            if ( !empty($data_k)) {     //jika data_k tidak kosong
+            if ( mysqli_num_rows($data_k) > 0 ) {     //jika data_k tidak kosong
                 $sql_update_k = "UPDATE konversi set penghasilan = '$penghasilan_k', jumlah_jiwa = '$jumlah_jiwa_k', luas_rumah = '$luas_rumah_k',  umur= '$umur_k' where id_cp = '$id_cp_k'";
                 $update_k = mysqli_query($koneksi, $sql_update_k);
             }
@@ -77,7 +77,7 @@ include("koneksi.php");
             $query_n = "SELECT * FROM `normalisasi` WHERE id_cp='$id_cp_n'";
             $data_n = mysqli_query($koneksi, $query_n);
 
-            if ( !empty($data_n)) {     //jika data_n tidak kosong
+            if ( mysqli_num_rows($data_n) > 0 ) {     //jika data_n tidak kosong
                 $sql_update_n = "UPDATE normalisasi set gaji = '$penghasilan_n', jiwa = '$jumlah_jiwa_n', rumah = '$luas_rumah_n',  umur= '$umur_n' where id_cp = '$id_cp_n'";
                 $update_n = mysqli_query($koneksi, $sql_update_n);
             }
@@ -128,7 +128,7 @@ include("koneksi.php");
             $query_h = "SELECT * FROM `hasil` WHERE id_cp='$id_cp_h'";
             $data_h = mysqli_query($koneksi, $query_h);
 
-            if ( !empty($data_h)) {     //jika data_h tidak kosong
+            if ( mysqli_num_rows($data_h) > 0 ) {     //jika data_h tidak kosong
                 $sql_update_h = "UPDATE hasil set value = '$hasil' where id_cp = '$id_cp_h'";
                 $update_h = mysqli_query($koneksi, $sql_update_h);
             }
