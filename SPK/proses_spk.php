@@ -36,10 +36,19 @@ include("koneksi.php");
     		}
     		elseif ($lr> 120) {	$luas_rumah_k = 0;
     		}
-            
-    		$sql_k = "INSERT INTO `konversi` (`id`, `id_cp`, `penghasilan`, `jumlah_jiwa`, `luas_rumah`, `umur`) VALUES ('$id_cp_k', '$id_cp_k', '$penghasilan_k', '$jumlah_jiwa_k', '$luas_rumah_k', '$umur_k')";
 
-    		$query1 = mysqli_query($koneksi, $sql_k);
+            $query_k = "SELECT * FROM `konversi` WHERE id_cp='$id_cp_k'";
+            $data_k = mysqli_query($koneksi, $query_k);
+
+            if ( !empty($data_k)) {     //jika data_k tidak kosong
+                $sql_update_k = "UPDATE konversi set penghasilan = '$penghasilan_k', jumlah_jiwa = '$jumlah_jiwa_k', luas_rumah = '$luas_rumah_k',  umur= '$umur_k' where id_cp = '$id_cp_k'";
+                $update_k = mysqli_query($koneksi, $sql_update_k);
+            }
+            else{
+                $sql_k = "INSERT INTO `konversi` (`id`, `id_cp`, `penghasilan`, `jumlah_jiwa`, `luas_rumah`, `umur`) VALUES ('$id_cp_k', '$id_cp_k', '$penghasilan_k', '$jumlah_jiwa_k', '$luas_rumah_k', '$umur_k')";
+                $query1 = mysqli_query($koneksi, $sql_k);
+            }
+            
     	}
     }
 
@@ -65,8 +74,19 @@ include("koneksi.php");
             $luas_rumah_n = round($rumah/$row['luas_rumah'], 9);
             $umur_n = round($row['umur']/$umur, 9);
 
-            $sql_n = "INSERT INTO `normalisasi` (`id`, `id_cp`, `gaji`, `jiwa`, `rumah`, `umur`) VALUES ('$id_n', '$id_cp_n', '$penghasilan_n', '$jumlah_jiwa_n', '$luas_rumah_n', '$umur_n')";
-            $query2 = mysqli_query($koneksi, $sql_n);
+            $query_n = "SELECT * FROM `normalisasi` WHERE id_cp='$id_cp_n'";
+            $data_n = mysqli_query($koneksi, $query_n);
+
+            if ( !empty($data_n)) {     //jika data_n tidak kosong
+                $sql_update_n = "UPDATE normalisasi set gaji = '$penghasilan_n', jiwa = '$jumlah_jiwa_n', rumah = '$luas_rumah_n',  umur= '$umur_n' where id_cp = '$id_cp_n'";
+                $update_n = mysqli_query($koneksi, $sql_update_n);
+            }
+            else{
+                $sql_n = "INSERT INTO `normalisasi` (`id`, `id_cp`, `gaji`, `jiwa`, `rumah`, `umur`) VALUES ('$id_n', '$id_cp_n', '$penghasilan_n', '$jumlah_jiwa_n', '$luas_rumah_n', '$umur_n')";
+                $query2 = mysqli_query($koneksi, $sql_n);
+            }
+
+
         }
     }
 
@@ -105,16 +125,23 @@ include("koneksi.php");
 
             $hasil = round($penghasilan_h + $jumlah_jiwa_h + $luas_rumah_h + $umur_h, 5);
             
-            $sql_h = "INSERT INTO `hasil` (`id`, `id_cp`, `value`) VALUES ('$id_h', '$id_cp_h', '$hasil')";
-            $query2 = mysqli_query($koneksi, $sql_h);
+            $query_h = "SELECT * FROM `hasil` WHERE id_cp='$id_cp_h'";
+            $data_h = mysqli_query($koneksi, $query_h);
+
+            if ( !empty($data_h)) {     //jika data_h tidak kosong
+                $sql_update_h = "UPDATE hasil set value = '$hasil' where id_cp = '$id_cp_h'";
+                $update_h = mysqli_query($koneksi, $sql_update_h);
+            }
+            else{
+                $sql_h = "INSERT INTO `hasil` (`id`, `id_cp`, `value`) VALUES ('$id_h', '$id_cp_h', '$hasil')";
+                $query2 = mysqli_query($koneksi, $sql_h);
+            }
+
         }
     }
 
 header("location:dataditerima.php")
 ?>
-
-
-
 
 
 </html>
