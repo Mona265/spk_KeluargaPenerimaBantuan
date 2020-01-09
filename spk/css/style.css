@@ -490,9 +490,11 @@ button:focus {
 /* Footer Area css
 ============================================================================================ */
 .footer_area {
-  background: #000;
+  background-color: : #ffffff;
+
   padding-top: 30px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+   }
 
 .f_title {
   margin-bottom: 35px; }

@@ -27,7 +27,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand" href="halamanutama.php"><img src="img/log.png" height="110px" width="160px" style="position: relative;"></a>
+						<a class="navbar-brand" href="halamanutama.php"><img src="img/log.png" height="40px" width="45px" style="position: relative;"></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>

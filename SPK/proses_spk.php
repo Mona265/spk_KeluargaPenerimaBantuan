@@ -123,7 +123,7 @@ include("koneksi.php");
             $luas_rumah_h = $row['rumah']* $bobot_rumah;
             $umur_h = $row['umur']* $bobot_umur;
 
-            $hasil = round($penghasilan_h + $jumlah_jiwa_h + $luas_rumah_h + $umur_h, 5);
+            $hasil = round($penghasilan_h + $jumlah_jiwa_h + $luas_rumah_h + $umur_h, 4);
             
             $query_h = "SELECT * FROM `hasil` WHERE id_cp='$id_cp_h'";
             $data_h = mysqli_query($koneksi, $query_h);

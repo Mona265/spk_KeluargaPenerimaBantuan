@@ -44,29 +44,22 @@
         
         <!--================Header Menu Area =================-->
         <header class="header_area">
-            <div class="main_menu">
-              <nav class="navbar navbar-expand-lg navbar-light">
-                 <div class="container">
+           <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
 
-            <!-- Brand and toggle get grouped for better mobile display -->
-                   <div class="banner_content text-center">
-                     <h3>Sistem Pendukung Keputusan Keluarga Penerima Bantuan</h3>
-                   </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+      <a class="navbar-brand" href="halamanutama.php"><img src="img/log.png" height="60px" width="65px" style="position: relative;"></a>
+      <a class="navbar-brand" href="halamanutama.php">Sistem Pendukung Keputusan<br>Keluarga Penerima Bantuan</a> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="halamanutama.php">Home</a></li> 
                 <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
-            </div> 
-                </div>
-              </nav>
             </div>
+    </div>
+  </nav>
         </header>
         <!--================Header Menu Area =================-->
         
@@ -74,11 +67,12 @@
       <section class="home_banner_area">
         <div class="box_1622"><br>
             
-          <a class="main_btn" href="tambahdatapenerima.php">Tambahkan penerima</a>
-          <a class="main_btn" href="proses_spk.php">Proses data</a>
-
-      <table class="table">
-      <thead class="thead-dark">
+          
+      <div class="container">
+      <a class="main_btn" href="tambahdatapenerima.php">Tambahkan penerima</a>
+      <a class="main_btn" href="proses_spk.php">Proses data</a>
+      <table class="table table-striped table-hover table-sm table-bordered">
+      <thead class="table-primary">
   
         <tr>
          <th scope="col" width="5%">No</th>
@@ -88,11 +82,12 @@
          <th scope="col" width="10%">Penghasilan</th>
          <th scope="col" width="10%">Jumlah Jiwa</th>
          <th scope="col" width="10%">Luas Rumah</th>
-         <th scope="col" width="15%"></th>
+         <th scope="col" width="20%"></th>
 
        </tr>
       </thead>
-  
+      </div>
+
      <?php
     include 'koneksi.php';
     $nomer = 1;
@@ -125,8 +120,10 @@
  
         
         <!--================Footer Area =================-->
-        <footer class="footer_area">
-          <div class="container">
+        <footer class="page-footer font-small blue-grey lighten-5">
+
+  <div style="background-color: #000000;">
+    <div class="container">
             <div class="row footer_inner">
               <div class="col-lg-5 col-sm-6">
                 <aside class="f_widget ab_widget">
