@@ -36,7 +36,7 @@ include("koneksi.php");
     		}
     		elseif ($lr> 120) {	$luas_rumah_k = 0;
     		}
-
+            
     		$sql_k = "INSERT INTO `konversi` (`id`, `id_cp`, `penghasilan`, `jumlah_jiwa`, `luas_rumah`, `umur`) VALUES ('$id_cp_k', '$id_cp_k', '$penghasilan_k', '$jumlah_jiwa_k', '$luas_rumah_k', '$umur_k')";
 
     		$query1 = mysqli_query($koneksi, $sql_k);
